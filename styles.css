@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 285px);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+main header {
+  position: relative;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  grid-column: span 2;
+  z-index: 1;
+}
+main header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+main header h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #263fa9;
+}
+main header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+main header p {
+  color: #394150;
+}
+.text {
+  width: 50%;
+  grid-column: span 2;
+}
+
+.square {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.Members {
+  background-color: #f3f4f6;
+  padding: 2.5rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: -1;
+}
+.Members a {
+  font-weight: 500;
+  color: #394150;
+}
+.intro {
+  padding: 25px;
+  color: #ffffff;
+}
+.intro h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.intro p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.Lian {
+  background-color: #c1b6f8;
+}
+.Sophia {
+  background-color: #edacd2;
+}
+.Ethan {
+  background-color: #9dc4f8;
+}
+.Isabella {
+  background-color: #f8d8b0;
+}
+.Noah {
+  background-color: #86e7d4;
+}
+
+.square-photo {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+.gradiant {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+@media (max-width: 1160px) {
+  body {
+    height: auto;
+  }
+  main {
+    margin: 50px 0;
+    grid-template-columns: repeat(3, 285px);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  main header {
+    grid-column: span 3;
+    padding: 40px;
+  }
+  .Members {
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 880px) {
+  main {
+    margin: 50px 0;
+    grid-template-columns: repeat(1, 300px);
+
+    grid-template-rows: repeat(7, 1fr);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  main header {
+    grid-column: auto;
+    padding: 50px;
+  }
+  .square-photo {
+    left: 50px;
+    right: 50px;
+  }
+  header .text {
+    width: auto;
+  }
+  .Members {
+    grid-row: 7;
+  }
+}
