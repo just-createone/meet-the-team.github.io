@@ -52,7 +52,7 @@ main header p {
   color: #394150;
 }
 .text {
-  width: 50%;
+  padding:2.5rem 1rem;
   grid-column: span 2;
 }
 
